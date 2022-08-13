@@ -31,6 +31,9 @@
     ],
     "parserOptions": {
       "project": "./tsconfig.json"
+    },
+    "rules": {
+      "react/function-component-definition": false
     }
   },
   "browserslist": {
