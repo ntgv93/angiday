@@ -33,7 +33,18 @@
       "project": "./tsconfig.json"
     },
     "rules": {
-      "react/function-component-definition": false
+      "react/function-component-definition": 0,
+      "@typescript-eslint/quotes": [
+        "error",
+        "single",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
+      "jsx-quotes": [
+        "error", 
+        "prefer-single" 
+      ]
     }
   },
   "browserslist": {
