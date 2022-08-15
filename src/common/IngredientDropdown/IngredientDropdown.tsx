@@ -16,6 +16,7 @@ const IngredientDropdown: React.FC<Props> = ({
   ingredientType,
   ingredients,
 }: Props) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const a = '';
   return (
     <FormControl>
@@ -24,7 +25,13 @@ const IngredientDropdown: React.FC<Props> = ({
         label='Protein'
         variant='outlined'
       >
-        {ingredients.map((ingredient) => <MenuItem value={ingredient}>{ingredient}</MenuItem>)}
+        {ingredients.map((ingredient) => (
+          <MenuItem
+            value={ingredient}
+          >
+            {ingredient}
+          </MenuItem>
+        ))}
       </Select>
     </FormControl>
   );
