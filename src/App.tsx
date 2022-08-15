@@ -1,24 +1,35 @@
 import React from 'react';
 import './App.css';
-import TextField from '@mui/material/TextField';
-import IngredientDropdown from './common/IngredientDropdown';
+import {
+  TextField,
+  Button,
+} from '@mui/material';
+import ingredientTypes from './data/ingredientTypes';
+import { IngredientDropdown } from './common';
 
 const App: React.FC = () => (
-  <div className='App'>
+  <div className='center'>
     <h1>
       Ăn Gì Đây
     </h1>
 
-    {/* input section */}
-    <div>
+    <div id='homepage_search_form'>
       <TextField label='Dish name' variant='outlined' />
       {/* TODO:
         - store ingredientType + ingredients in the DB
         - fetch ingredientType + ingredients from the DB on load
        */}
-      <IngredientDropdown ingredientType='Protein' ingredients={['Beef', 'Chicken', 'Pork', 'Sea food']} />
-      <IngredientDropdown ingredientType='Carb' ingredients={['Rice', 'Pasta', 'Potato', 'Bread']} />
-      <IngredientDropdown ingredientType='Veggies' ingredients={['Rau Muống', 'Broccoli', 'Spinach', 'Lettuce']} />
+      {ingredientTypes.map((type) => (
+        <IngredientDropdown
+          ingredientType={type.name}
+          ingredients={type.ingredientList}
+        />
+      ))}
+      <Button variant='contained'>Search</Button>
+    </div>
+
+    <div id='dish list'>
+      <div />
     </div>
   </div>
 );

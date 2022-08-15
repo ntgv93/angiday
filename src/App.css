@@ -1,0 +1,9 @@
+.center {
+  text-align: center;
+}
+
+#homepage_search_form{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
