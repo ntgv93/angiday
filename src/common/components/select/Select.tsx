@@ -8,28 +8,28 @@ import {
 } from '@mui/material';
 
 interface Props {
-  ingredientType: string,
-  ingredients: string[]
+  label: string,
+  options: string[]
 }
 
 const IngredientDropdown: React.FC<Props> = ({
-  ingredientType,
-  ingredients,
+  label,
+  options,
 }: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const a = '';
   return (
     <FormControl>
-      <InputLabel>{ingredientType}</InputLabel>
+      <InputLabel>{label}</InputLabel>
       <Select
         label='Protein'
         variant='outlined'
       >
-        {ingredients.map((ingredient) => (
+        {options.map((option) => (
           <MenuItem
-            value={ingredient}
+            value={option}
           >
-            {ingredient}
+            {option}
           </MenuItem>
         ))}
       </Select>

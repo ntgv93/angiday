@@ -5,7 +5,7 @@ import {
   Button,
 } from '@mui/material';
 import ingredientTypes from './data/ingredientTypes';
-import { Select } from './common/select';
+import { Select } from './common/components';
 
 const App: React.FC = () => (
   <div className='center'>
@@ -21,8 +21,8 @@ const App: React.FC = () => (
        */}
       {ingredientTypes.map((type) => (
         <Select
-          ingredientType={type.name}
-          ingredients={type.ingredientList}
+          label={type.name}
+          options={type.ingredientList}
         />
       ))}
       <Button variant='contained'>Search</Button>
