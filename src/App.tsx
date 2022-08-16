@@ -5,7 +5,7 @@ import {
   Button,
 } from '@mui/material';
 import ingredientTypes from './data/ingredientTypes';
-import { IngredientDropdown } from './common';
+import { Select } from './common/select';
 
 const App: React.FC = () => (
   <div className='center'>
@@ -20,7 +20,7 @@ const App: React.FC = () => (
         - fetch ingredientType + ingredients from the DB on load
        */}
       {ingredientTypes.map((type) => (
-        <IngredientDropdown
+        <Select
           ingredientType={type.name}
           ingredients={type.ingredientList}
         />
