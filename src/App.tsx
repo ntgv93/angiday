@@ -1,20 +1,20 @@
 import React from 'react';
 import './App.css';
 import {
-  TextField,
   Button,
 } from '@mui/material';
 import ingredientTypes from './data/ingredientTypes';
 import { Select } from './common/components';
+import { SearchTextField } from './features/search-text-field';
 
 const App: React.FC = () => (
-  <div className='center'>
-    <h1>
+  <div id='app' className='center'>
+    <h1 id='title'>
       Ăn Gì Đây
     </h1>
 
     <div id='homepage_search_form'>
-      <TextField label='Dish name' variant='outlined' />
+      <SearchTextField />
       {/* TODO:
         - store ingredientType + ingredients in the DB
         - fetch ingredientType + ingredients from the DB on load
