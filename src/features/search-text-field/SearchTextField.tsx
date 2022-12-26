@@ -9,6 +9,7 @@ const StyledTextField = styled(TextField)<TextFieldProps>(() => ({
   '& .MuiInputBase-root': {
     backgroundColor: '#1f3a5a',
     '& input': {
+      color: 'white',
       '&.Mui-focused:': {
         borderColor: 'white',
       },
@@ -30,7 +31,6 @@ const StyledTextField = styled(TextField)<TextFieldProps>(() => ({
       color: 'white',
     },
   },
-
 }));
 
 const SearchTextField: React.FC = () => (
