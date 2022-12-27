@@ -2,10 +2,17 @@
   text-align: center;
 }
 
-#homepage_search_form {
+#homepage-search-form {
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+
+#dish-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #title {

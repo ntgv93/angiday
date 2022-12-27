@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import {
-  Button,
-} from '@mui/material';
+import { Button } from '@mui/material';
 import ingredientTypes from './data/ingredientTypes';
 import { Select } from './common/components';
 import { SearchTextField } from './features/search-text-field';
+import DishCards from './common/components/dishCards/DishCards';
 
 const App: React.FC = () => (
   <div id='app' className='center'>
@@ -13,7 +12,7 @@ const App: React.FC = () => (
       Ăn Gì Đây
     </h1>
 
-    <div id='homepage_search_form'>
+    <div id='homepage-search-form'>
       <SearchTextField />
       {/* TODO:
         - store ingredientType + ingredients in the DB
@@ -28,10 +27,9 @@ const App: React.FC = () => (
       <Button variant='contained'>Search</Button>
     </div>
 
-    <div id='dish list'>
-      <div />
+    <div id='dish-cards'>
+      <DishCards />
     </div>
   </div>
 );
-
 export default App;
